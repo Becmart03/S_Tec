@@ -1,0 +1,44 @@
+#Stage_menu_opciones_contenido_opciones_bt_opciones6{
+    visibility: hidden;
+}
+
+.no_tuto{
+    visibility: hidden;
+}
+
+body {
+	background-color: #ffffff;
+	transition: 0.25s;
+}
+
+.btn {
+	transition: 0.25s;
+	transform: scale(1) !important;
+}
+.btn:hover {
+	transform: scale(1.2) !important; 
+}
+
+.btn_volver:hover {
+	-webkit-transform: scale(1.5) rotate(-150deg)!important;
+	transform: scale(1.5) rotate(-150deg)!important;	
+}
+
+.r180 {transition: 0.25s; -webkit-transform: scale(1) rotate(180deg)!important; transform:scale(1) rotate(180deg)!important;}
+.r180:hover {-webkit-transform: scale(1.2) rotate(180deg)!important; transform: scale(1.2) rotate(180deg)!important;}
+
+/*Fuente*/
+@font-face {
+  font-family:'Abel Regular';  
+  src: url('abel-regular.ttf') format('truetype'), url('abel-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'Blue Highway Condensed';
+  src: url('blue-highway-cd.ttf') format('truetype'), url('blue-highway-cd.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
