@@ -1,43 +1,44 @@
+let personas=[];
 
-let triangulo=[];
-let circulo=[];
-let cuadrado=[];
-let rectangulo=[];
 //nombre, id , fn,corre, ciudadR
-function capturarTriangulo(){
-        let trianguloa=parseInt(document.getElementById("trianguloa").value);
-        let triangulob=parseInt(document.getElementById("triangulob").value);
-        let trianguloc=parseInt(document.getElementById("trianguloc").value);
-        let trianguloh=parseInt(document.getElementById("trianguloh").value);
-        let perimt="El perimetro es: "+(trianguloa+triangulob+trianguloc)
-        let tria="el area es: "+((triangulob*trianguloh)/2)
-        let p1=[trianguloa, triangulob, trianguloc, trianguloh, tria, perimt];
-        triangulo.push(p1);
-        console.log(triangulo);
+function capturarData(){
+    let suma=0
+    let menor=200;
+    let mayor=0;
+    let promedio=0
+    let adultomayor=0
+    let menores=0
+    let mayores=0
+    if(personas.length<10){
+        let nombre=document.getElementById("nombre").value;
+        let edad=parseInt(document.getElementById("edad").value);
+        let datos=[nombre,edad];
+        personas.push(datos);
+        console.log(personas);
+}else {for (let i=0; i<10;i++){
+
+    if (mayor<personas[i][1]){
+        mayor=personas[i][1];
+    }
+    if(menor>personas[i][1]){
+        menor=personas[i][1];
+    }
+    suma=suma+personas[i][1];
+    if (personas[i][1]<18){
+        menores=menores+1;
+    } else if (personas[i][1]>=18 && personas[i][1]<60){
+        mayores=mayores+1;
+    }
+    else{
+        adultomayor=adultomayor+1;
+    }
+    }
+    promedio=suma/personas.length
+    alert(" la cantidad de menores es: " + menores + " la cantidad de mayores es: " +mayores + " la cantidad de adultos mayores es: " + adultomayor );
+    alert("la edad menor es: " + menor);
+    alert(" la edad mayor es: "+ mayor);
+    alert(" el promedio de edades es: "+promedio);
 }
 
-function capturarCuadrado(){
-        let cuadradoa=parseInt(document.getElementById("cuadradoa").value);
-        let perimcua="El perimetro es: "+(cuadradoa*4)
-        let areacua="el area es: "+ (cuadradoa*cuadradoa)
-        let cua=[cuadradoa, areacua, perimcua];
-        cuadrado.push(cua);
-        console.log(cuadrado);
-}
-function capturarCirculo(){
-        let circuloa=parseInt(document.getElementById("circuloa").value);
-        let perimt="El perimetro es: "+(circuloa*3.14*2);
-        let circa="el area es: "+(circuloa*circuloa*3.14);
-        let p3=[circuloa, perimt, circa];
-        circulo.push(p3);
-        console.log(circulo);
-}
-function capturarRectangulo(){
-    let rectanguloa=parseInt(document.getElementById("rectanguloa").value);
-    let rectangulob=parseInt(document.getElementById("rectangulob").value);
-    let perirecta="El perimetro es: "+((rectanguloa+rectangulob)*2);
-    let arearecta="el area es: "+(rectanguloa*rectangulob);
-    let recta=[rectanguloa,rectangulob,perirecta,arearecta];
-    rectangulo.push(recta);
-    console.log(rectangulo);
+
 }

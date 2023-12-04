@@ -14,4 +14,4 @@ deposito=parseInt(prompt("por favor ingrese la cantidad a consignar"));
 meses=60;
 valor_futuro=1.08**meses;
 final=valor_futuro*deposito
-document.write("el valor final que lepertenece es:" + parseFloat(final) )
+document.write("el valor final que lepertenece es:" + parseFloat(final) + "vf" + valor_futuro )
