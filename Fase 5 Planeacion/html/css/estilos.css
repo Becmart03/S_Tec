@@ -1,74 +1,79 @@
-h1 {
-    font-family: 'Courier New', Courier, monospace;
-    color: rgb(128, 128, 128);
-  }
-
-  p{
-    font-size: 16px;
-    color: chocolate;
-    border: 1px; border-style: groove;
-  }
-
-  table{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: darksalmon;
-    border: 2px;
-    border-width: 3px;
-    
-    background-color: brown;
-    outline-color: cadetblue;
-    column-rule-color: white;
-  }
-  a{
-    color: brown;
-  }
-  /*selector de id solo sirve para asignarlo a una etiqueta*/
-  #serious {
-    background: red;
-    color: blue;
-    font-size: 16px;
-  }
-  /*selector de clase sirve para asignarlo muchas etiquetas*/
-  /*investigar pseudo clases y pseudo elementos y selectores de atributos*/
-  .container {
-    background: rgb(0, 255, 64);
-    color: blue;
-    font-size: 16px;
-  }
-
-  .parrafos {
-    color: blueviolet;
-    background-color: darkgray;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
-  }
-
-  .parrafo_normal{
-    font-family:monospace;
-    color: crimson;
-  }
-
-  /*pseudo clase estados*/
-  h1:hover{
-    color: black;
-  }
-a[href*="www"]{
-background-color: green;
+/* h1 {
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(128, 128, 128);
 }
+
+p {
+  font-size: 16px;
+  color: chocolate;
+  border: 1px;
+  border-style: groove;
+}
+
+table {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: darksalmon;
+  border: 2px;
+  border-width: 3px;
+
+  background-color: brown;
+  outline-color: cadetblue;
+  column-rule-color: white;
+}
+
+a {
+  color: brown;
+} */
+
+/*selector de id solo sirve para asignarlo a una etiqueta*/
+/* #serious {
+  background: red;
+  color: blue;
+  font-size: 16px;
+} */
+
+/*selector de clase sirve para asignarlo muchas etiquetas*/
+/*investigar pseudo clases y pseudo elementos y selectores de atributos*/
+/* .container {
+  background: rgb(0, 255, 64);
+  color: blue;
+  font-size: 16px;
+}
+
+.parrafos {
+  color: blueviolet;
+  background-color: darkgray;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.parrafo_normal {
+  font-family: monospace;
+  color: crimson;
+} */
+
+/*pseudo clase estados*/
+/* h1:hover {
+  color: black;
+}
+
+a[href*="www"] {
+  background-color: green;
+} */
 
 /*modificador de clase existente*/
-.parrafo_normal::first-line{
-    background-color: aqua;
+/* .parrafo_normal::first-line {
+  background-color: aqua;
 }
 
-div a[href*="linking"]{
-    background-color: rgb(0, 225, 255);
-    }
+div a[href*="linking"] {
+  background-color: rgb(0, 225, 255);
+} */
 
 
 /*combinadores*/
 /*descendientess*/
-div p{
-background-color:blanchedalmond;
+div p {
+  background-color: blanchedalmond;
 }
 
 /*combinadores combinadores hijos directo*/
@@ -81,43 +86,48 @@ font-weight: 200;
 hace que los h2 que se encuentren inmedientamente despues de un h1 
 sean seleccionados*/
 
-h1 + h2 {
-color: darkblue;
+h1+h2 {
+  color: darkblue;
 }
+
 /*
 /*hermanos generales
 se seleccionan todos los elementos h2 que esten despues del primer h1*/
-h2~h3{
-background-color: burlywood;
+h2~h3 {
+  background-color: burlywood;
 }
 
-div p[align="right"]{
-background-color: green;
+div p[align="right"] {
+  background-color: green;
 }
+
 input {
-    display: block;
-    padding: 1rem;
-    min-width: 24rem;
-    background-color:rgb(240, 240, 240);
-    
+  display: block;
+  padding: 1rem;
+  min-width: 24rem;
+  background-color: rgb(240, 240, 240);
+
 }
+
 input.text {
-    font-size: 1rem;
-    margin: auto;
-    min-width: auto;
-    text-align: center;
-    padding: 20px;
-    
+  font-size: 1rem;
+  margin: auto;
+  min-width: auto;
+  text-align: center;
+  padding: 20px;
+
 }
+
 input.submit {
-  background-color:rgb(255, 187, 0);
-  color:black;
+  background-color: rgb(255, 187, 0);
+  color: black;
   margin: auto;
   border-radius: 5px;
 
-  
+
 }
-input.form{
+
+input.form {
   font-style: italic;
   position: relative;
   align-items: center;
@@ -126,12 +136,14 @@ input.form{
   margin: auto;
   border-radius: 5px;
 }
+
 body {
-    width: 100%;
-    height: 100vh;
-    background-image: url("../images/dibujo.svg");
-    background-size: cover;
+  width: 100%;
+  height: 100vh;
+  /* background-image: url("../images/dibujo.svg"); */
+  background-size: cover;
 }
+
 .icono-cabecera {
   width: 8rem;
   height: 9rem;
@@ -140,11 +152,11 @@ body {
   top: 10rem;
   z-index: 99;
 }
-.formulario-login {
+
+.formulario_login {
   width: 28rem;
   padding: 30px;
   margin: auto;
-  position: relative;
   top: 120px;
   background-color: #ffffff;
   border-radius: 15px;
@@ -156,16 +168,19 @@ body {
   display: flex;
   justify-content: space-around;
 }
-.menu-horizontal > li > a {
+
+.menu-horizontal>li>a {
   display: block;
   padding: 15px 20px;
   color: white;
   text-decoration: none;
 }
-.menu-horizontal > li:hover {
+
+.menu-horizontal>li:hover {
   background-color: rgb(21, 83, 134);
   border-radius: 15px;
 }
+
 .menu-vertical {
   position: absolute;
   display: none;
@@ -174,13 +189,16 @@ body {
   background-color: rgb(21, 83, 134);
   border-radius: 15px;
 }
+
 .menu-horizontal li:hover .menu-vertical {
   display: block;
 }
+
 .menu-vertical li:hover {
-  background-color: #74a6b8;
+  background-color: #003c52;
   border-radius: 15px;
 }
+
 .menu-vertical li a {
   display: block;
   color: white;
@@ -188,37 +206,99 @@ body {
   text-decoration: none;
 }
 
-.formulario{
-  font-family:monospace;
-  font-size:12px;
-  width:800px;
-  margin:auto;
+.formulario {
+  font-family: monospace;
+  font-size: 12px;
+  width: 800px;
+  margin: auto;
 }
+
 #form {
-  border:1px solid #990000;
-  width:450px;
-  margin:auto;
+  border: 1px solid #990000;
+  width: 450px;
+  margin: auto;
   display: inline-block;
 }
+
 #form input.btn {
-    padding:3px;
-    color:#FFFFFF;
-    
-    border:1px solid #000000;
+  padding: 3px;
+  color: #FFFFFF;
+  border: 1px solid #000000;
 }
 
 #form input[type=text] {
-  border:1px solid #CCCCCC;
+  border: 1px solid #CCCCCC;
 }
 
-#form ol{
-    list-style:none;
+#form ol {
+  list-style: none;
 }
-#form ol li{
-    padding-bottom:5px;
+
+#form ol li {
+  padding-bottom: 5px;
 }
-#form ol li label{
-    width:120px;
-    float:left;
-    text-align:left;
+
+#form ol li label {
+  width: 120px;
+  float: left;
+  text-align: left;
+}
+
+.inputs-matricula {
+  display: wrap;
+  flex-wrap: wrap;
+}
+
+footer {
+  text-align: center;
+  font-family: "JetBrains Mono", monospace;
+  background-color: yellow;
+}
+
+.bordes-redondeados {
+
+  padding: 25px;
+  margin: 30px, 50px, 30px, 1050px;
+  border: 20px;
+  border-style: solid;
+  border-radius: 50%;
+  background-color: #CCCCCC;
+}
+
+.form-izq {
+  background-color: red;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 25vw;
+}
+
+.form-der {
+  background-color: silver;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 25vw;
+
+}
+
+.formulario {
+  background-color: gainsboro;
+  flex: wrap;
+}
+
+.imagenes {
+
+  /*
+  margen interno
+  */
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  /*
+  lo mismo que
+  padding: 10px, 10px, 10px, 10px;
+  */
+  /* border-color: black;
+  border-width: 10px;
+  border-style: double; */
 }

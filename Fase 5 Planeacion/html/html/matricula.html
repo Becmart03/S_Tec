@@ -4,59 +4,77 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
-    <meta name="description" content />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="../css/estilos.css" />
-  </head>
 
-  <body>
-    <div class="formulario">
-      <form action="ejemplo.php" method="get">
-        <label>Nombre: </label>
-        <input type="text" name="nombre" size="40" />
-        <ol>
-           
-            <li>
-            <label>Apellidos: </label
-            ><input type="text" name="apillido" size="40" />
-          </li>
-          <li>
-            <label>tipo documento:</label> <input type="text" name="t_doc" />
-          </li>
-          <li>
-            <label>num documento:</label>
-            <input type="number" name="n_doc" min="1900" />
-          </li>
-          <li>Fecha nacimiento: <input type="date" name="f_nac" /></li>
-          <li>Direccion: <input type="number" name="dir" /></li>
-          <li>Correo: <input type="text" name="correo" size="20" /></li>
-          <li>
-            Nombre del acudiente:
-            <input type="text" name="n_acudiente" size="50" />
-          </li>
-          
-            tipo doc del acudiente:
-            <input type="text" name="d_acudiente" size="12" />
-          
-          
-            Numero doc del acudiente:
-            <input type="number" name="n_doc_acud" min="1900" />
-          
-          
-            Sexo: <input type="radio" name="hm" value="h" /> Hombre
-            <input type="radio" name="hm" value="m" /> Mujer
-          
-            <input type="submit" value="Enviar" />
-            <input type="reset" value="Borrar" />
-          </p>
-        </ol>
-      </form>
+<head>
+  <div class="breadcrumb-container">
+    <div class="row">
+      <div class="col mt-2">
+        <nav aria-label="breadcrumb">
+          <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="planeacion.html">Planeacion</a></li>
+            <li class="breadcrumb-item"><a href="calificaciones.html">Calificaciones</a></li>
+            <li class="breadcrumb-item"><a href="grupos.html">grupos</a></li>
+            <li class="breadcrumb-item active" aria-current="page">matricula</li>
+          </ul>
+        </nav>
+      </div>
     </div>
+  </div>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title></title>
+  <meta name="description" content />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../css/maatricula.css" />
+</head>
+
+<body>
+  <main>
+
+    <form action="ejemplo.php" method="get" class="principal_form">
+      <div class="formulario">
+        <img class="bordes-redondeados" src="../images/imagen45.jpg" alt="mariam">
+        <div>
+          <input type="file" value="cargar imagen" name="nombre" size="40" placeholder="nombre" required />
+        </div>
+
+        <div class="settings">
+          <label>Nombre </label>
+          <input type="text" name="nombre" size="40" placeholder="nombre" required />
+          <label>Apellidos </label>
+          <input type="text" name="apellido" size="40" placeholder="apellido" required />
+          <label>tipo documento</label>
+          <input type="text" name="t_doc" placeholder="tipo documento" />
+          <label>num documento</label>
+          <input type="text" name="n_doc" placeholder="Numero Documento" required />
+          <label>Fecha nacimiento</label>
+          <input type="date" name="f_nac" max="2025-04-30" placeholder="Fecha Nacimiento" required />
+          <label>Correo:</label>
+          <input type="text" name="correo" size="20" placeholder="Correo" required />
+          <label>Direccion</label>
+          <input type="text" name="dir" placeholder="Direccion" />
+          <label>Nombre del acudiente</label>
+          <input type="text" name="n_acudiente" size="50" placeholder="Nombre Acudiente" />
+          <label>tipo doc del acudiente</label>
+          <input type="text" name="d_acudiente" size="12" placeholder="Documento Acudiente" required />
+          <label>Numero doc del acudiente</label>
+          <input type="text" name="n_doc_acud" />
+
+          <input type="submit" value="Enviar" />
+          <input type="reset" value="Borrar" />
+        </div>
+      </div>
+    </form>
+
 
     <script src async defer></script>
-  </body>
+  </main>
+  <footer>
+    <p><small>
+        derechos de autor Juan Becquet
+      </small>
+    </p>
+  </footer>
+</body>
+
 </html>

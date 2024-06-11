@@ -25,7 +25,12 @@ clase 23.https://www.youtube.com/watch?v=yTQXA6zyT2Q - diagrama de procesos ingl
 Clase 24.https://www.youtube.com/watch?v=18rDLMGgxag - interfaz grafica y mapa de navegacion
 Clase 25.https://www.youtube.com/watch?v=YUbeYtmuCrc - maquetacion grafica
 Clase 26.https://www.youtube.com/watch?v=A8aGY_GLrcA - backup
-Clase 27.
-Clase 28.
-Clase 29.
-Clase 30.
+
+ejecucion 6==================================================================================
+clase 26. https://www.youtube.com/watch?v=qkfYzhM8OPg - resolver problemas usando el modelo relacional
+Clase 27.https://www.youtube.com/watch?v=Dr06pCtqz4w - creacion de los obejtos de la bd
+Clase 28.https://www.youtube.com/watch?v=pLoUnkkAEGs - marca sostenicle
+Clase 29.https://www.youtube.com/watch?v=tZxIt1a_lsA - estructura bd
+Clase 30.https://www.youtube.com/watch?v=MheTYpUkwis creacion sitio web
+clase 31.https://www.youtube.com/watch?v=VucxyAWMW7I - maquetacion css
+

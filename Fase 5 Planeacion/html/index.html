@@ -1,23 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>PROYECTO SENA</title>
-    <link rel="stylesheet" href="css\estilos.css">
-  </head>
 
-  <body>
-    <div class="icono-cabecera">
-        <img src="images/icono.png">
+<head>
+  <title>PROYECTO SENA</title>
+  <link rel="stylesheet" href="css\maatricula.css">
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+  rel="stylesheet">
+
+<body>
+  <form id="miFormulario" action="/html/pagina_principal.html">
+    <div class="formulario_login">
+      <div>
+        <img class="bordes-redondeados" src="images/icono.png">
+      </div>
+      <div class="formulario_login_item">
+        <input type="text" name="username" value="" placeholder="usuario" />
+        <input type="password" name="password" value="" placeholder="contraseña" />
+        <input type="submit" value="ingresar" />
+        <a href="html/contraseña.html" rel="noopener noreferrer" target="_blank">olvidé mi contraseña</a>
+      </div>
     </div>
-    <div class="formulario-login">
-      <form class="form" id="miFormulario" action="/html/pagina_principal.html">
-            <input type="text" name="username" value="" placeholder="usuario" class="form" />
-            <input type="password" name="password" value="" placeholder="contraseña" class="form" />
-            <input type="submit" value="ingresar" class="submit" />
-            </br>
-            <a href="html/contraseña.html">olvidé mi contraseña</a>
-        </form>
-    </div>
-  </body>
-  <footer></footer>
+  </form>
+
+
+  <footer>
+    <p><small>
+        derechos de autor Juan Becquet
+      </small>
+    </p>
+  </footer>
+</body>
+
+
 </html>
