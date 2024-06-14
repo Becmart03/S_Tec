@@ -13,7 +13,9 @@
           <ul class="breadcrumb">
             <li class="breadcrumb-item"><a href="planeacion.html">Planeacion</a></li>
             <li class="breadcrumb-item"><a href="calificaciones.html">Calificaciones</a></li>
+            <li class="breadcrumb-item"><a href="informes.html">Informes</a></li>
             <li class="breadcrumb-item"><a href="grupos.html">grupos</a></li>
+            <li class="breadcrumb-item"><a href="principal.html">inicio</a></li>
             <li class="breadcrumb-item active" aria-current="page">matricula</li>
           </ul>
         </nav>
@@ -40,25 +42,27 @@
 
         <div class="settings">
           <label>Nombre </label>
-          <input type="text" name="nombre" size="40" placeholder="nombre" required />
+          <input class="inputmatricula" type="text" name="nombre" size="40" placeholder="nombre" required />
           <label>Apellidos </label>
-          <input type="text" name="apellido" size="40" placeholder="apellido" required />
+          <input class="inputmatricula" type="text" name="apellido" size="40" placeholder="apellido" required />
           <label>tipo documento</label>
-          <input type="text" name="t_doc" placeholder="tipo documento" />
+          <input class="inputmatricula" type="text" name="t_doc" placeholder="tipo documento" />
           <label>num documento</label>
-          <input type="text" name="n_doc" placeholder="Numero Documento" required />
+          <input class="inputmatricula" type="text" name="n_doc" placeholder="Numero Documento" required />
           <label>Fecha nacimiento</label>
-          <input type="date" name="f_nac" max="2025-04-30" placeholder="Fecha Nacimiento" required />
+          <input class="inputmatricula" type="date" name="f_nac" max="2025-04-30" placeholder="Fecha Nacimiento"
+            required />
           <label>Correo:</label>
-          <input type="text" name="correo" size="20" placeholder="Correo" required />
+          <input class="inputmatricula" type="text" name="correo" size="20" placeholder="Correo" required />
           <label>Direccion</label>
-          <input type="text" name="dir" placeholder="Direccion" />
+          <input class="inputmatricula" type="text" name="dir" placeholder="Direccion" />
           <label>Nombre del acudiente</label>
-          <input type="text" name="n_acudiente" size="50" placeholder="Nombre Acudiente" />
+          <input class="inputmatricula" type="text" name="n_acudiente" size="50" placeholder="Nombre Acudiente" />
           <label>tipo doc del acudiente</label>
-          <input type="text" name="d_acudiente" size="12" placeholder="Documento Acudiente" required />
+          <input class="inputmatricula" type="text" name="d_acudiente" size="12" placeholder="Documento Acudiente"
+            required />
           <label>Numero doc del acudiente</label>
-          <input type="text" name="n_doc_acud" />
+          <input class="inputmatricula" type="text" name="n_doc_acud" />
 
           <input type="submit" value="Enviar" />
           <input type="reset" value="Borrar" />
