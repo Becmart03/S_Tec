@@ -2,13 +2,18 @@
 <html lang="en">
 
 <head>
+  <link rel="stylesheet" href="css\maatricula.css">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>¿Olvidaste la contraseña?</title>
   <link rel="stylesheet" href="../css/maatricula.css" />
 </head>
+<script src='../scripts/jquery-3.7.1.min.js'></script>
 
 <body>
+  <div id="mensaje" style="display: none;">
+    <h2>El mensaje ha sido enviado a tu correo. ¡Gracias por tu visita!</h2>
+  </div>
   <div class="formulario">
 
     <img class=bordes-redondeados src="../images/icono.png" alt="login image" />
@@ -18,10 +23,22 @@
       <p text-align="center">Ingrese su correo electrónico institucional</p>
       <form action="">
         <input type="text" name="Correo institucional" placeholder="Correo institucional" required class="text" />
-        <input type="submit" name="Buscar" class="submit" value="Enviar" />
+        <input id='enviar' type="submit" name="Buscar" class="submit" value="Enviar" />
       </form>
     </div>
+
   </div>
+  <script>
+    $(document).ready(function () {
+      $(".formulario").submit(function (event) {
+        event.preventDefault();
+        $(".formulario").fadeOut(1000, function () {
+          $("#mensaje").fadeIn(1000);
+        });
+      });
+    });
+  </script>
+
 
   <footer>
     <p><small>

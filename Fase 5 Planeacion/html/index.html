@@ -3,15 +3,21 @@
 
 <head>
   <title>PROYECTO SENA</title>
-  <link rel="stylesheet" href="css\maatricula.css">
+  <link rel="stylesheet" href="css/maatricula.css">
 </head>
+<!--script src="scripts/ejercicio.js"></script-->
+<script src="scripts/jquery-3.7.1.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
   rel="stylesheet">
 
 <body>
+
   <form id="miFormulario" action="/html/principal.html">
+    <div id="mensaje" style="display: none;">
+      <h1>Espere unos segundos</h1>
+    </div>
     <div class="formulario_login">
       <div>
         <img class="bordes-redondeados" src="images/icono.png">
@@ -25,6 +31,20 @@
     </div>
   </form>
 
+  <script>
+    $(document).ready(function () {
+      $("#miFormulario").submit(function (event) {
+        event.preventDefault();
+        $(".formulario_login").fadeOut(1000, function () {
+          $("#mensaje").fadeIn(1000, function () {
+            setTimeout(function () {
+              window.location.href = "/html/principal.html";
+            }, 1000);
+          });
+        });
+      });
+    });
+  </script>
 
   <footer>
     <p><small>
@@ -33,6 +53,5 @@
     </p>
   </footer>
 </body>
-
 
 </html>
