@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Calculadora de notas</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <h1>
+        Calculadora de notas
+    </h1>
+    <form action="calcular_nota.php" method="post">
+        <label for="parcial1">Calificacion del primer parcial:</label>
+        <input type="number" name="parcial1" step="0.01" required><br><br>
+        <label for="parcial2">Calificacion del segundo parcial:</label>
+        <input type="number" name="parcial2" step="0.01" required><br><br>
+        <label for="parcial3">Calificacion del tercer parcial:</label>
+        <input type="number" name="parcial3" step="0.01" required><br><br>
+        <label for="examen_final">Calificacion del examen final:</label>
+        <input type="number" name="examen_final" step="0.01" required><br><br>
+        <label for="trabajo_final">Calificacion del trabajo final:</label>
+        <input type="number" name="trabajo_final" step="0.01" required><br><br>
+
+        <input type="submit" value="calcular nota final"><br><br>
+    </form>
+    <script src="" async defer></script>
+</body>
+
+</html>
