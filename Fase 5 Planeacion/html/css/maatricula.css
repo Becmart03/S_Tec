@@ -182,3 +182,23 @@ input.nota {
   overflow: auto;
   background-color: aliceblue;
 }
+
+div.h2 {
+  display: flexbox;
+  align-items: center;
+  justify-items: center;
+
+}
+
+#mensaje h2 {
+  text-align: center;
+}
+
+
+#mensaje {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}

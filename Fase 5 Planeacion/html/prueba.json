@@ -1,0 +1,78 @@
+{
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "lambdaParameters": {
+      "type": "object",
+      "properties": {
+        "audienceVersionId": {
+          "type": "string"
+        },
+        "target": {
+          "type": "string"
+        },
+        "deliveryFilename": {
+          "type": "string"
+        },
+        "clientId": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        },
+        "apiKey": {
+          "type": "string"
+        },
+        "executionType": {
+          "type": "string"
+        },
+        "resourceId": {
+          "type": "string"
+        },
+        "extraData": {
+          "type": "object",
+          "properties": {
+            "clientName": {
+              "type": "string"
+            }
+          },
+          "required": ["clientName"]
+        },
+        "audienceType": {
+          "type": "string"
+        },
+        "resourceType": {
+          "type": "string"
+        },
+        "threshold": {
+          "type": "string"
+        },
+        "taskId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "audienceVersionId",
+        "target",
+        "deliveryFilename",
+        "clientId",
+        "token",
+        "apiKey",
+        "executionType",
+        "resourceId",
+        "extraData",
+        "audienceType",
+        "resourceType",
+        "threshold",
+        "taskId"
+      ]
+    },
+    "message": {
+      "type": "string"
+    },
+    "statusCode": {
+      "type": "number"
+    }
+  },
+  "required": ["lambdaParameters", "message", "statusCode"]
+}
