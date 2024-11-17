@@ -1,0 +1,67 @@
+{% extends "admin/base.html" %}
+{% block title %}Nuevo Estudiante{% endblock %}
+{% block content %}
+<h2 class="text-center">Registrar Nuevo Estudiante</h2>
+<form action="{{ url_for('nuevo_estudiante') }}" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="nombres">Nombres</label>
+        <input type="text" class="form-control" id="nombres" name="nombres" required>
+    </div>
+    <div class="form-group">
+        <label for="apellidos">Apellidos</label>
+        <input type="text" class="form-control" id="apellidos" name="apellidos" required>
+    </div>
+    <div class="form-group">
+        <label for="tipo_documento">Tipo de Documento</label>
+        <select class="form-control" id="tipo_documento" name="tipo_documento" required>
+            <option value="CC">Cédula de Ciudadanía</option>
+            <option value="TI">Tarjeta de Identidad</option>
+            <option value="CE">Cédula de Extranjería</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="documento">Número de Documento</label>
+        <input type="text" class="form-control" id="documento" name="documento" required>
+    </div>
+    <div class="form-group">
+        <label for="sexo">Sexo</label>
+        <select class="form-control" id="sexo" name="sexo" required>
+            <option value="M">Masculino</option>
+            <option value="F">Femenino</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="nacionalidad">Nacionalidad</label>
+        <input type="text" class="form-control" id="nacionalidad" name="nacionalidad" required>
+    </div>
+    <div class="form-group">
+        <label for="direccion">Dirección</label>
+        <input type="text" class="form-control" id="direccion" name="direccion" required>
+    </div>
+    <div class="form-group">
+        <label for="foto">Foto</label>
+        <input type="file" class="form-control" id="foto" name="foto">
+    </div>
+    <div class="form-group">
+        <label for="nombre_acudiente">Nombre del Acudiente</label>
+        <input type="text" class="form-control" id="nombre_acudiente" name="nombre_acudiente" required>
+    </div>
+    <div class="form-group">
+        <label for="documento_acudiente">Documento del Acudiente</label>
+        <input type="text" class="form-control" id="documento_acudiente" name="documento_acudiente" required>
+    </div>
+    <div class="form-group">
+        <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+        <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" required>
+    </div>
+    <div class="form-group">
+        <label for="telefono">Teléfono</label>
+        <input type="text" class="form-control" id="telefono" name="telefono" required>
+    </div>
+    <div class="form-group">
+        <label for="correo_electronico">Correo Electrónico</label>
+        <input type="email" class="form-control" id="correo_electronico" name="correo_electronico" required>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Registrar</button>
+</form>
+{% endblock %}

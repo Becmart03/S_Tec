@@ -1,0 +1,109 @@
+{% extends "admin/base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h2 class="text-center mb-4">Dashboard de Administración</h2>
+        <div class="card mb-4">
+            <div class="card-body text-center">
+                <h5 class="card-title">Bienvenido al Panel de Administración!</h5>
+                <p class="card-text">Has iniciado sesión exitosamente.</p>
+                <a href="{{ url_for('admin_logout') }}" class="btn btn-danger">Cerrar Sesión</a>
+            </div>
+        </div>
+
+        <!-- Opciones del Dashboard con imágenes -->
+        <div class="row">
+            <!-- Registro de Estudiantes -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/registro_estudiantes.jpg') }}" class="card-img-top"
+                        alt="Registro de Estudiantes">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Registro de Estudiantes</h5>
+                        <p class="card-text">Gestiona el registro de estudiantes nuevos.</p>
+                        <a href="" class="btn btn-primary">Ir a Registro</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Matrícula -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/matricula.jpg') }}" class="card-img-top"
+                        alt="Matrícula">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Matrícula</h5>
+                        <p class="card-text">Administra el proceso de matrícula de los estudiantes.</p>
+                        <a href="{{ url_for('admin_matricula') }}" class="btn btn-primary">Ir a Matrícula</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grupos -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/grupos.jpg') }}" class="card-img-top" alt="Grupos">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Grupos</h5>
+                        <p class="card-text">Organiza y gestiona los grupos de estudiantes.</p>
+                        <a href="{{ url_for('admin_grupos') }}" class="btn btn-primary">Ir a Grupos</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Institución -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/institucion.jpg') }}" class="card-img-top"
+                        alt="Institución">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Institución</h5>
+                        <p class="card-text">Consulta la información de la institución.</p>
+                        <a href="{{ url_for('admin_institucion') }}" class="btn btn-primary">Ir a Institución</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Asignaturas -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/asignaturas.jpg') }}" class="card-img-top"
+                        alt="Asignaturas">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Asignaturas</h5>
+                        <p class="card-text">Gestiona las asignaturas disponibles.</p>
+                        <a href="{{ url_for('admin_asignaturas') }}" class="btn btn-primary">Ir a Asignaturas</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calificaciones -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/calificaciones.jpg') }}" class="card-img-top"
+                        alt="Calificaciones">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Calificaciones</h5>
+                        <p class="card-text">Consulta y administra las calificaciones.</p>
+                        <a href="{{ url_for('admin_calificaciones') }}" class="btn btn-primary">Ir a Calificaciones</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Informes -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/informes.jpg') }}" class="card-img-top"
+                        alt="Informes">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Informes</h5>
+                        <p class="card-text">Genera informes y reportes académicos.</p>
+                        <a href="{{ url_for('admin_informes') }}" class="btn btn-primary">Ir a Informes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

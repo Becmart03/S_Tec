@@ -1,0 +1,43 @@
+{% extends "admin/base.html" %}
+{% block title %}Gestión de Matrícula{% endblock %}
+{% block content %}
+<h2 class="text-center">Gestión de Matrícula de Estudiantes</h2>
+<a href="{{ url_for('nuevo_estudiante') }}" class="btn btn-success mb-3">Agregar Estudiante</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Documento</th>
+            <th>Sexo</th>
+            <th>Curso</th>
+            <th>Año</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for estudiante in estudiantes %}
+        <tr>
+            <td>{{ estudiante['idAlumno'] }}</td>
+            <td>{{ estudiante['Nombres'] }} {{ estudiante['apellidos'] }}</td>
+            <td>{{ estudiante['Documento'] }}</td>
+            <td>{{ estudiante['Sexo'] }}</td>
+            <td>{{ estudiante['idCurso'] }}</td>
+            <td>{{ estudiante['anio'] }}</td>
+            <td>
+                <a href="{{ url_for('editar_estudiante', id=estudiante['idAlumno']) }}"
+                    class="btn btn-warning">Editar</a>
+                <form action="{{ url_for('eliminar_estudiante', id=estudiante['idAlumno']) }}" method="post"
+                    style="display:inline;">
+                    <button type="submit" class="btn btn-danger"
+                        onclick="return confirm('¿Seguro que deseas eliminar este estudiante?');">
+                        Eliminar
+                    </button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

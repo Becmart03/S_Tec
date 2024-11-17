@@ -1,0 +1,92 @@
+{% include 'admin/cabecera.html' %}
+
+institucion
+
+<div class="container">
+    <div class="row">
+        <div class="col-5">
+            <div class="card">
+                <div class="card-header">Datos de la institucion</div>
+                <div class="card-body">
+                    <!--al recibir un archivo, hay que ponerle el tipo de enctype-->
+                    <form action="/admin/institucion/guardar" method="post" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="txtInstitucion" class="form-label">Nombre IUnstitucion</label>
+                            <input type="text" class="form-control" name="txtInstitucion" id="txtInstitucion"
+                                aria-describedby="helpId" placeholder="Escriba el nombre de la institucion" />
+                            <!--imagen para cargar-->
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtImagen" class="form-label">imagen:`</label>
+                            <input type="file" class="form-control" name="txtImagen" id="txtImagen"
+                                aria-describedby="helpId" placeholder="Sleecccione la imagen" />
+                            <!--=====================================================================-->
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtUrl" class="form-label">URL de descarga:</label>
+                            <input type="text" class="form-control" name="txtUrl" id="txtUrl"
+                                placeholder="Escriba la URL de la descarga" />
+
+                        </div>
+                        <input name="" id="" class="btn btn-primary" type="submit" value="agregar" />
+
+
+
+
+
+                    </form>
+
+                </div>
+                <div class="card-footer text-muted">Footer</div>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="table-responsive">
+                <table class="table table-primary">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Imagen</th>
+                            <th scope="col">URL</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        {% for usuario in lista_usuarios %}
+                        <tr class="">
+                            <td scope="row">{{usuario[0]}}</td>
+                            <!--Aca se muestran los indices de la lista como columnas, tenerlo en cuenta -->
+                            <td>{{usuario[1]}}</td>
+                            <td>{{usuario[2]}}</td>
+                            <td>{{usuario[3]}}</td>
+                            <td>
+                                <form action="/admin/institucion/borrar" method="post">
+                                    <input value="{{usuario[0]}}" name="txtId" id="txtId" type="text" />
+
+
+                                    <button type="submit" name="btnEliminar" id="btnEliminar" class="btn btn-primary"
+                                        href="#" role="button">Eliminar</a>
+
+                                </form>
+
+
+
+                            </td>
+                        </tr>
+                        {% endfor %}
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+{% include 'admin/pie.html' %}
