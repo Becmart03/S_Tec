@@ -1,0 +1,81 @@
+{% include 'admin/cabecera.html' %}
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-2">
+            <!--espacio en blanco-->
+        </div>
+        <div class="col-md-8">
+            <h2>Seccion matricula</h2>
+            <br>
+
+            <form class="row col-md-10">
+                <img src="/imagenes/usr.png" class="img-fluid rounded-top" alt="" />
+
+                <div class="mb-1">
+                    <label for="txtNombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" name="txtNombre" id="txtNombre" aria-describedby="helpId"
+                        placeholder="nombre" />
+
+                </div>
+                <div class="mb-1">
+                    <label for="txtApellido" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" name="txtApellido" id="txtApellido"
+                        aria-describedby="helpId" placeholder="apellido" />
+
+                </div>
+                <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label">contraseña</label>
+                    <input type="password" class="form-control" id="inputPassword4">
+                </div>
+                <div class="col-12">
+                    <label for="inputAddress" class="form-label">Direccion</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                </div>
+                <div class="col-6">
+                    <label for="txtTipoDocumento" class="form-label">Tipo Documento</label>
+                    <input type="text" class="form-control" name="txtTipoDocumento" id="txtTipoDocumento"
+                        aria-describedby="" placeholder="" />
+                    <small id="" class="form-text text-muted">Help text</small>
+                </div>
+
+                <div class="col-6">
+                    <label for="txtDocumento" class="form-label">Documento</label>
+                    <input type="text" class="form-control" name="txtDocumento" id="txtDocumento"
+                        aria-describedby="helpId" placeholder="Numero de documento" />
+
+                </div>
+
+                <div class="col-6">
+                    <label for="inputCity" class="form-label">Ciudad</label>
+                    <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                        Check me out
+                    </label>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary" id="btnGuardar">Guardar</button>
+                </div>
+
+        </div>
+
+
+
+
+        </form>
+    </div>
+    <div class="col-md-2">
+        <!--espacio en blanco-->
+    </div>
+</div>
+</div>
+
+{% include 'admin/pie.html' %}

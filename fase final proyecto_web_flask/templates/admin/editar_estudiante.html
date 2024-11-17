@@ -1,0 +1,81 @@
+{% extends "admin/base.html" %}
+{% block title %}Editar Estudiante{% endblock %}
+{% block content %}
+<h2 class="text-center">Editar Estudiante</h2>
+<form action="{{ url_for('editar_estudiante', id=estudiante['idAlumno']) }}" method="POST"
+    enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="nombres">Nombres</label>
+        <input type="text" class="form-control" id="nombres" name="nombres" value="{{ estudiante['nombres'] }}"
+            required>
+    </div>
+    <div class="form-group">
+        <label for="apellidos">Apellidos</label>
+        <input type="text" class="form-control" id="apellidos" name="apellidos" value="{{ estudiante['apellidos'] }}"
+            required>
+    </div>
+    <div class="form-group">
+        <label for="tipo_documento">Tipo de Documento</label>
+        <select class="form-control" id="tipo_documento" name="tipo_documento" required>
+            <option value="CC" {% if estudiante['tipo_documento']=='CC' %}selected{% endif %}>Cédula de Ciudadanía
+            </option>
+            <option value="TI" {% if estudiante['tipo_documento']=='TI' %}selected{% endif %}>Tarjeta de Identidad
+            </option>
+            <option value="CE" {% if estudiante['tipo_documento']=='CE' %}selected{% endif %}>Cédula de Extranjería
+            </option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="documento">Número de Documento</label>
+        <input type="text" class="form-control" id="documento" name="documento" value="{{ estudiante['documento'] }}"
+            required>
+    </div>
+    <div class="form-group">
+        <label for="sexo">Sexo</label>
+        <select class="form-control" id="sexo" name="sexo" required>
+            <option value="M" {% if estudiante['sexo']=='M' %}selected{% endif %}>Masculino</option>
+            <option value="F" {% if estudiante['sexo']=='F' %}selected{% endif %}>Femenino</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="nacionalidad">Nacionalidad</label>
+        <input type="text" class="form-control" id="nacionalidad" name="nacionalidad"
+            value="{{ estudiante['nacionalidad'] }}" required>
+    </div>
+    <div class="form-group">
+        <label for="direccion">Dirección</label>
+        <input type="text" class="form-control" id="direccion" name="direccion" value="{{ estudiante['direccion'] }}"
+            required>
+    </div>
+    <div class="form-group">
+        <label for="foto">Foto</label>
+        <input type="file" class="form-control" id="foto" name="foto">
+    </div>
+    <div class="form-group">
+        <label for="nombre_acudiente">Nombre del Acudiente</label>
+        <input type="text" class="form-control" id="nombre_acudiente" name="nombre_acudiente"
+            value="{{ estudiante['nombre_acudiente'] }}" required>
+    </div>
+    <div class="form-group">
+        <label for="documento_acudiente">Documento del Acudiente</label>
+        <input type="text" class="form-control" id="documento_acudiente" name="documento_acudiente"
+            value="{{ estudiante['documento_acudiente'] }}" required>
+    </div>
+    <div class="form-group">
+        <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+        <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento"
+            value="{{ estudiante['fecha_nacimiento'] }}" required>
+    </div>
+    <div class="form-group">
+        <label for="telefono">Teléfono</label>
+        <input type="text" class="form-control" id="telefono" name="telefono" value="{{ estudiante['telefono'] }}"
+            required>
+    </div>
+    <div class="form-group">
+        <label for="correo_electronico">Correo Electrónico</label>
+        <input type="email" class="form-control" id="correo_electronico" name="correo_electronico"
+            value="{{ estudiante['correo_electronico'] }}" required>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Actualizar</button>
+</form>
+{% endblock %}
